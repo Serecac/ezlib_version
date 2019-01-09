@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Library</string>
+
+    <string name="update_update">Actualizar</string>
+    <string name="update_noUpdate">No, gracias</string>
+
+    <string name="forceupdate_update">Actualizar</string>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/update_mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.23"
+        android:gravity="center"
+        android:paddingStart="@dimen/update_padding"
+        android:paddingLeft="@dimen/update_padding">
+
+        <TextView
+            android:id="@+id/update_title_text"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/update_line_topseparator"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.005"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.495"
+        android:weightSum="1"
+        android:baselineAligned="false"
+        android:padding="@dimen/update_paddingBody"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/update_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.27"
+        android:weightSum="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/update_padding"
+        android:paddingBottom="@dimen/update_padding">
+
+        <LinearLayout
+            android:id="@+id/update_noUpdate_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.493"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/update_noUpdate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/update_noUpdate"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/update_line_bottomSeparator"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.003"/>
+
+        <LinearLayout
+            android:id="@+id/update_update_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.493"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/update_update_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/update_update"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

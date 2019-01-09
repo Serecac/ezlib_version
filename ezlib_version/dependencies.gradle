@@ -1,0 +1,15 @@
+allprojects {
+    ext {
+        supportLibraryVersion = "28.0.0"
+        androidDependencies = [ androidSupportv7        : "com.android.support:appcompat-v7:$supportLibraryVersion",
+                                androidSupportv4        : "com.android.support:support-v4:$supportLibraryVersion",
+                                androidSupportv13       : "com.android.support:support-v13:$supportLibraryVersion",
+                                design                  : "com.android.support:design:$supportLibraryVersion"]
+
+        dependencies = [        gsonConverter           : "com.squareup.retrofit2:converter-gson:2.4.0",
+                                dagger                  : "com.google.dagger:dagger:2.18",
+                                daggerCompiler          : "com.google.dagger:dagger-compiler:2.18"]
+
+        testDependencies = [    junit                   : "junit:junit:4.12"]
+    }
+}
