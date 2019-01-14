@@ -1,5 +1,6 @@
 package es.ezlib.version;
 
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
@@ -9,6 +10,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.view.Gravity;
 import android.view.View;
@@ -24,6 +26,8 @@ import es.ezlib.preferences.EzlibPreferencesManager;
 public class EzlibVersionManager {
 
     private final String PREFERENCE_ATTEMPTS_ASKUPDATE = "attemps_askupdate";
+    private final String CHANEL_ID = "version_chanel_id";
+    private final String CHANEL_NAME = "version_chanel";
 
     private final int NOTIFICATION_ID = 123;
 
@@ -142,7 +146,9 @@ public class EzlibVersionManager {
 
     private void showNotification() {
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(configuration.getContext());
+        createNotificationChannel();
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(configuration.getContext(), CHANEL_ID);
         mBuilder.setLargeIcon(BitmapFactory.decodeResource(configuration.getContext().getResources(), configuration.getIconLargeUpdate()));
         mBuilder.setSmallIcon(configuration.getIconSmallUpdate());
         mBuilder.setContentTitle(configuration.getTitleUpdate());
@@ -171,5 +177,13 @@ public class EzlibVersionManager {
                     .addMessage("App not found on market")
                     .addThrowable(exception));
         }
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT < 26)
+            return;
+        NotificationManager notificationManager = (NotificationManager) configuration.getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationChannel channel = new NotificationChannel(CHANEL_ID, CHANEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+        notificationManager.createNotificationChannel(channel);
     }
 }
