@@ -20,6 +20,23 @@ public class EzlibVersionConfiguration {
     private int dialogSecondColor;
     private int dialogTextColor;
 
+    public EzlibVersionConfiguration(String preferencesName, Context context, int attempToAskForUpdate, String titleUpdate, String textUpdate, int iconSmallUpdate, int iconLargeUpdate, int parentHeight, int parentWidth, boolean hasTypeface, Typeface typeface, int dialogMainColor, int dialogSecondColor, int dialogTextColor) {
+        this.preferencesName = preferencesName;
+        this.context = context;
+        this.attempToAskForUpdate = attempToAskForUpdate;
+        this.titleUpdate = titleUpdate;
+        this.textUpdate = textUpdate;
+        this.iconSmallUpdate = iconSmallUpdate;
+        this.iconLargeUpdate = iconLargeUpdate;
+        this.parentHeight = parentHeight;
+        this.parentWidth = parentWidth;
+        this.hasTypeface = hasTypeface;
+        this.typeface = typeface;
+        this.dialogMainColor = dialogMainColor;
+        this.dialogSecondColor = dialogSecondColor;
+        this.dialogTextColor = dialogTextColor;
+    }
+
     public String getPreferencesName() {
         return preferencesName;
     }
