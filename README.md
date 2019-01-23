@@ -49,23 +49,24 @@ EzlibVersionManager provideEzlibVersionManager(EzlibVersionConfiguration configu
 ------------------------------------------------------
 
 **EzlibVersionConfiguration**
-It is mandatory to initialize the manager with the configuration that will personalize the warnings, which will be shown to the user in case of needing an update
+
+It is mandatory to initialize the manager with the configuration that will personalize the warnings, which will be shown to the user in case of needing an update.
 The values that must be configured are:
 
-*preferencesName => Name used for storage in SharedPreferences
-*context => Context of app
-*attempToAskForUpdate = Attempt number before showing the next notice.
-*titleUpdate => Text to show in the title
-*textUpdate => Text to show in the body
-*iconSmallUpdate = Small icon for notification
-*iconLargeUpdate = Large icon for notification
-*parentHeight = Parent height
-*parentWidth = Parent width
-*hasTypeface = Indicates if you want to use a font in texts
-*typeface = Font to use in texts
-*dialogMainColor = Main color;
-*dialogSecondColor = Second color;
-*dialogTextColor = Text color;
+* preferencesName => Name used for storage in SharedPreferences
+* context => Context of app
+* attempToAskForUpdate = Attempt number before showing the next notice.
+* titleUpdate => Text to show in the title
+* textUpdate => Text to show in the body
+* iconSmallUpdate = Small icon for notification
+* iconLargeUpdate = Large icon for notification
+* parentHeight = Parent height
+* parentWidth = Parent width
+* hasTypeface = Indicates if you want to use a font in texts
+* typeface = Font to use in texts
+* dialogMainColor = Main color;
+* dialogSecondColor = Second color;
+* dialogTextColor = Text color;
 
 How to use
 -------
