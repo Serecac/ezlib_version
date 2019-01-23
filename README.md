@@ -72,9 +72,10 @@ How to use
 -------
 
 There are 3 ways to check the version:
-*checkVersion => If the indicated version is higher than the current version, the user is notified according to the defined type.
-*checkWithOnlineVersion => If the version of the application currently in production (in Google Play) is higher than the current version, the user is notified according to the defined type.
-*checkWithVersionList => If the current version is found in the version list, the user is notified according to the defined type.
+
+* checkVersion => If the indicated version is higher than the current version, the user is notified according to the defined type.
+* checkWithOnlineVersion => If the version of the application currently in production (in Google Play) is higher than the current version, the user is notified according to the defined type.
+* checkWithVersionList => If the current version is found in the version list, the user is notified according to the defined type.
 
 
 Contribution
