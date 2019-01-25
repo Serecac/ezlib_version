@@ -10,7 +10,7 @@ public class EzlibVersionModule {
 
     @Provides
     @Singleton
-    EzlibVersionManager provideEzlibVersionManager(EzlibVersionConfiguration configuration) {
+    EzlibVersionManager provideEzlibVersionManager(@EzlibVersionConfig EzlibVersionConfiguration configuration) {
         return new EzlibVersionManager(configuration);
     }
 }

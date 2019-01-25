@@ -41,10 +41,21 @@ The library provides a module that can be injected directly by dagger into your 
 ```
 @Provides
 @Singleton
-EzlibVersionManager provideEzlibVersionManager(EzlibVersionConfiguration configuration) {
+EzlibVersionManager provideEzlibVersionManager(@EzlibVersionConfig EzlibVersionConfiguration configuration) {
 	return new EzlibVersionManager(configuration);
 }
 ```
+
+If you use this implementation it is necessary to give value to the annotation, as shown in the following example:
+```
+@Provides
+@Singleton
+@EzlibVersionConfig
+EzlibVersionConfiguration provideEzlibVersionConfig() {
+	return <configuration>;
+}
+```
+
 
 ------------------------------------------------------
 
